@@ -44,9 +44,9 @@ MongoClient.connect(mongoUrl, function(err, db) {
 
         else {
 
-            access.findBookByTitle(db, redis, req.params.title, function(book) {
+            access.findBookByTitleCached(db, redis, req.params.title, function(book) {
 
-                if(!text)
+                if(!book)
                     res.status(500).send("Server error");
 
                 else

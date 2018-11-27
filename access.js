@@ -25,12 +25,16 @@ module.exports.findBookByTitleCached = function (db, redis, title, callback) {
         if (err)
             callback(null);
         
-        else if (reply) 
+        else if (reply) {
+
+            console.log("Title " + title + " found in Redis!!!");
             // The book exists in the Redis cache
             callback(JSON.parse(reply));
+        }
         
         else {
             
+            console.log("Title " + title + " NOT found in Redis. Now searching in MongoDB.");
             // The book doesn't exist in the cache
             // A query to the main database is required.
             db.collection('text').findOne({
@@ -56,7 +60,7 @@ module.exports.updateBookByTitle = function (db, redis, title, newText, callback
         title: title
     }, {
         $set: {
-            text: text
+            text: newText
         }
     }, function (err, doc) { //Update the main database
         if (err)
