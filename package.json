@@ -1,0 +1,28 @@
+{
+  "name": "mongodb_rediscache",
+  "version": "1.0.0",
+  "description": "An example of how caching can be achieved by using Redis in a backend server that uses MongoDB",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChavaO777/MongoDB_RedisCache.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Redis",
+    "Cache"
+  ],
+  "author": "ChavaO777",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.13.3",
+    "mongodb": "^2.0.45",
+    "redis": "^2.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ChavaO777/MongoDB_RedisCache/issues"
+  },
+  "homepage": "https://github.com/ChavaO777/MongoDB_RedisCache#readme"
+}
