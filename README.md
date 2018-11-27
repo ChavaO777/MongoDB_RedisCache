@@ -6,6 +6,8 @@ An example of how caching can be achieved by using Redis in a backend server tha
 
 [Original GitHub repository](https://github.com/sitepoint-editors/mongodb-redis-cache)
 
+# Instructions for running the app
+
 - To start MongoDB
 
     sudo mongod
